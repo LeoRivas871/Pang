@@ -46,22 +46,27 @@ class Pang:
         '''Responde a las pulsaciones de teclas.'''
         if event.key == pygame.K_RIGHT:
             self.mono.moving_right = True
+            print('Tecla derecha')
         elif event.key == pygame.K_LEFT:
             self.mono.moving_left = True
+            print('Tecla izquierda')
         elif event.key == pygame.K_SPACE and not self.mono.is_jumping:
             #Iniciar el salto si no está ya saltando.
             self.mono.is_jumping = True
             self.mono.vertical_speed = self.mono.jump_speed
+            print('Tecla de espacio presionada, salto iniciado')
         elif event.key == pygame.K_q:
             sys.exit()
 
 
     def _check_keyup_events(self, event):
-        '''Responde a liberaciones de teclas.'''
+        '''Responde a liberaciones de teclas'''
         if event.key == pygame.K_RIGHT:
             self.mono.moving_right = False
+            print("Tecla derecha liberada")
         elif event.key == pygame.K_LEFT:
             self.mono.moving_left = False
+            print("Tecla izquierda liberada")
 
 
     def _update_screen(self):
