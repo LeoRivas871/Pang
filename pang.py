@@ -78,6 +78,7 @@ class Pang:
 
 if __name__ == '__main__':
     pang = Pang()
+    print('jajajaj')
     pang.run_game()
 
 
